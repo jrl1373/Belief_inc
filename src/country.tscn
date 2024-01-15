@@ -36,7 +36,7 @@ offset_top = 6.0
 offset_right = 97.0
 offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Spotlight - 0
+text = "Spotlight:  0
 "
 metadata/_edit_use_anchors_ = true
 
@@ -74,7 +74,7 @@ offset_top = 116.0
 offset_right = 109.0
 offset_bottom = 142.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Aesthetics - 0
+text = "Aesthetics:  -5
 "
 metadata/_edit_use_anchors_ = true
 

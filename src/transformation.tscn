@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc2m72joy5va"]
+
+[ext_resource type="Script" path="res://src/transformation.gd" id="1_tp052"]
+[ext_resource type="Texture2D" uid="uid://co0jyru2ayvhr" path="res://icon.svg" id="2_rily3"]
+
+[node name="Transformation" type="Node2D"]
+script = ExtResource("1_tp052")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 397.0
+offset_bottom = 514.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/Panel"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 24.0
+offset_right = 358.0
+offset_bottom = 52.0
+text = "Text!"
+
+[node name="Image" type="Sprite2D" parent="MarginContainer/Panel"]
+position = Vector2(80, 70)
+scale = Vector2(1.54688, 1.39844)
+texture = ExtResource("2_rily3")
+centered = false
+
+[node name="Attributes" type="VBoxContainer" parent="MarginContainer/Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 258.0
+offset_right = 395.0
+offset_bottom = 513.0
+
+[node name="Flavor" type="Label" parent="MarginContainer/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

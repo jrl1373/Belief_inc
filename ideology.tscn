@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2sp1x0xfafyc"]
-
-[ext_resource type="Script" path="res://src/Ideology.gd" id="1_iofcx"]
-
-[node name="Ideology" type="Node2D"]
-script = ExtResource("1_iofcx")
