@@ -1,0 +1,129 @@
+[gd_scene load_steps=4 format=3 uid="uid://der47yc2tnjrh"]
+
+[ext_resource type="Script" path="res://src/Country.gd" id="1_l8nq5"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_syek0"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_n7n31"]
+specular_texture = SubResource("ImageTexture_syek0")
+specular_color = Color(0.370364, 0.370364, 0.370364, 1)
+
+[node name="Country" type="Node2D"]
+position = Vector2(79, 312)
+script = ExtResource("1_l8nq5")
+population = null
+believers = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 0
+position = Vector2(197.75, 91)
+scale = Vector2(396.5, 392)
+texture = SubResource("CanvasTexture_n7n31")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 97.0
+offset_top = -94.0
+offset_right = 294.0
+offset_bottom = -18.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Diet Restrictions
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Awareness" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 97.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Spotlight - 0
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="AwarenessBar" type="ProgressBar" parent="."]
+offset_left = 187.0
+offset_top = 1.0
+offset_right = 397.0
+offset_bottom = 44.0
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Label" parent="."]
+offset_left = 6.0
+offset_top = 56.0
+offset_right = 100.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Control + 10
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="ControlBar" type="ProgressBar" parent="."]
+offset_left = 185.0
+offset_top = 55.0
+offset_right = 395.0
+offset_bottom = 98.0
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Aesthetics" type="Label" parent="."]
+offset_left = 6.0
+offset_top = 116.0
+offset_right = 109.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Aesthetics - 0
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="AestheticsBar" type="ProgressBar" parent="."]
+offset_left = 185.0
+offset_top = 115.0
+offset_right = 395.0
+offset_bottom = 158.0
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar4" type="ProgressBar" parent="."]
+offset_left = 184.0
+offset_top = 176.0
+offset_right = 394.0
+offset_bottom = 219.0
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 6.0
+offset_top = 170.0
+offset_right = 77.0
+offset_bottom = 196.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Wellness + 10
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar5" type="ProgressBar" parent="."]
+offset_left = 185.0
+offset_top = 235.0
+offset_right = 395.0
+offset_bottom = 278.0
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 6.0
+offset_top = 236.0
+offset_right = 77.0
+offset_bottom = 262.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Idealism + 5
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-254, -64)
