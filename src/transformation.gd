@@ -6,22 +6,34 @@ var title = ""
 var image = "res://icon.svg"
 var attributes = [0,0,0,0,0]
 var flavor = ""
+var added = false
+signal add_transformation
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$MarginContainer/Panel/Title.text = title
-	$MarginContainer/Panel/Flavor.text = flavor
-	$MarginContainer/Panel/Image.texture = load(image)
+	$MContainer/Panel/Title.text = title
+	$MContainer/Panel/Flavor.text = flavor
+	$MContainer/Panel/Image.texture = load(image)
 	for i in range(len(attributes)):
 		var label = Label.new()
 		label.text = attribute_names[i] + ": "+  str(attributes[i])
-		$MarginContainer/Panel/Attributes.add_child(label)
+		$MContainer/Panel/Attributes.add_child(label)
 	pass # Replace with function body.
 	
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print("hello")
+
 	pass
+	
+func init(vals):
+	self.title = vals[1]
+	self.attributes = vals.slice(2,7)
+	self.image = vals[7]
+	self.flavor = vals[8]
 
 	
+
+
+func _on_button_pressed():
+	add_transformation.emit()
+

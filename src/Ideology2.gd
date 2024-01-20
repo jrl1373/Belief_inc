@@ -1,4 +1,5 @@
 extends Node2D
+
 enum Attributes {SPOTLIGHT,AESTHETICS,CONTROL,WELLNESS,INCOME}
 var attributes = [0,0,0,0,0]
 var wealth = 0
@@ -7,7 +8,6 @@ var inspiration = 0
 var aware = 0
 var followers = 0
 var actors = 0
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -18,9 +18,8 @@ func _process(delta):
 	pass
 
 
-func _on_button_pressed():
-	print("E")
-	update_attributes([1,1,1,1,1])
+func _on_area_2d_mouse_entered():
+	print("EE")
 	pass # Replace with function body.
 
 
@@ -37,12 +36,12 @@ func init(attributes, wealth, initiative, inspiration, aware, followers,actors):
 
 func update_attributes(transformation):
 	for i in range(len(transformation)):
-		attributes[i] += int(transformation[i])
+		attributes[i] += transformation[i]
 	var idx = 0
 	print("eee")
 	for i in $Attributes/Container.get_children():
-		var val = i.get_child(1)
-		val.text = str(attributes[idx])
+		print(i)
+		i.val.text = attributes[idx]
 		idx += 1
 		
 		
@@ -50,13 +49,3 @@ func update_attributes(transformation):
 func get_attribute(Attribute):
 	return attributes[Attribute]
 
-
-
-
-
-
-
-func _on_transformations_add_transformation(attributes):
-	print("added")
-	update_attributes(attributes.slice(2,7))
-	pass # Replace with function body.

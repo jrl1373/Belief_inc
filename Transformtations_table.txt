@@ -1,0 +1,11 @@
+Id,Name,Spotlight,Aesthetics,Control,Wellness,Income,Flavor,Image
+0,"Generous",5,5,5,5,-5,,
+1,"Materialistic",5,0,0,5,5,,
+2,"Collaborative",5,5,5,5,0,,
+3,"Congregatative",6,0,10,0,0,,
+4,"Non-materialistic",-5,10,15,5,-10,,
+5,"Book worms",0,0,5,5,0,,
+6,"Publishers",10,0,0,0,5,,
+7,"Critical",5,0,10,0,0,,
+8,"Aggressive",5,0,15,-5,0,,
+9,"Passive",-5,5,10,5,0,,

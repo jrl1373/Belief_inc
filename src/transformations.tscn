@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2rh2vtvbxfks"]
+
+[ext_resource type="Script" path="res://src/Transformations.gd" id="1_1q8uo"]
+[ext_resource type="PackedScene" uid="uid://bc2m72joy5va" path="res://src/transformation.tscn" id="2_2v0ci"]
+[ext_resource type="PackedScene" uid="uid://cq8ujnjjx0ow2" path="res://src/TransformationNode.tscn" id="3_n1rvy"]
+
+[node name="Transformations" type="Node2D"]
+position = Vector2(-2, 4)
+script = ExtResource("1_1q8uo")
+transformation_scn = ExtResource("2_2v0ci")
+transformation_nd = ExtResource("3_n1rvy")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 2.0
+offset_top = 198.0
+offset_right = 1153.0
+offset_bottom = 307.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_top = 216.0
+offset_right = 419.0
+offset_bottom = 287.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
