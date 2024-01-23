@@ -1,11 +1,53 @@
-Id,Name,Spotlight,Aesthetics,Control,Wellness,Income,Flavor,Image
-0,"Generous",5,5,5,5,-5,,
-1,"Materialistic",5,0,0,5,5,,
-2,"Collaborative",5,5,5,5,0,,
-3,"Congregatative",6,0,10,0,0,,
-4,"Non-materialistic",-5,10,15,5,-10,,
-5,"Book worms",0,0,5,5,0,,
-6,"Publishers",10,0,0,0,5,,
-7,"Critical",5,0,10,0,0,,
-8,"Aggressive",5,0,15,-5,0,,
-9,"Passive",-5,5,10,5,0,,
+Id,Name,Spotlight,Aesthetics,Control,Wellness,Income,Flavor,Image,tree,tier
+0,Generous,5,5,5,5,-5,,,a,1
+1,Non-materialistic,-5,10,15,5,-10,,,a,1
+2,Decentralized,5,10,-5,5,0,,,a,2
+3,Hedonistic,5,15,5,-10,0,,,a,2
+4,Progressive,5,5,5,0,0,,,a,2
+5,Symbolistic,5,10,0,0,0,,,a,2
+6,Open minded,-5,15,-5,10,,,,a,2
+7,Populist,10,15,-10,0,,,,a,2
+8,Self Discovery,0,25,-10,5,0,,,a,3
+9,Forgive the past,0,25,-10,5,0,,,a,3
+10,Congregatative,5,0,10,0,0,,,c,1
+11,Critical,5,0,10,0,0,,,c,1
+12,Aggressive,5,0,15,-5,0,,,c,2
+13,Centralized,0,-5,20,0,0,,,c,2
+14,Totalitarian,0,-5,20,-5,5,,,c,3
+15,Closed off,-10,5,15,5,,,,c,2
+16,Accelerationist,5,5,10,-5,0,,,c,2
+17,Regressive,0,0,15,0,0,,,c,2
+18,Inner circle,-5,0,20,0,10,,,c,3
+19,Hierarchy,0,0,10,0,5,,,c,2
+20,Materialistic,5,0,0,5,5,,,i,1
+21,Hoarders,0,-5,5,-5,20,,,i,1
+22,Financially literate,0,0,0,5,10,,,i,1
+23,savers,0,,5,5,5,,,i,1
+24,selfish,-5,-5,5,0,20,,,i,2
+25,pro banking,0,-5,5,-5,20,,,i,2
+26,hard working,0,5,5,5,5,,,i,2
+27,tithe,0,-10,10,-5,20,,,i,3
+28,All is mine,0,-15,10,-15,40,,,i,3
+29,Seizing Production,0,0,0,-10,30,,,i,3
+30,Publishers,10,0,0,0,5,,,s,1
+31,Evangelical,20,0,5,-5,-5,,,s,2
+32,Artistic,10,10,0,0,-5,,,s,2
+33,talkative,10,0,0,5,0,,,s,2
+34,socially active,10,0,0,5,0,,,s,2
+35,Protesting,15,-5,5,0,0,,,s,2
+36,Street Gospel,20,-5,0,-5,0,,,s,2
+37,Convincing,15,5,0,0,-5,,,s,2
+38,double speek,20,-5,10,-10,0,,,s,3
+39,Media Controlling,40,10,0,0,-30,,,s,3
+40,Collaborative,5,5,5,5,0,,,w,1
+41,Book worms,0,0,5,5,0,,,w,1
+42,Passive,-5,5,10,5,0,,,w,2
+43,Democratic,5,5,-5,5,0,,,w,2
+44,Stoic,0,5,0,10,0,,,w,2
+45,Collectivist,5,10,-5,10,-5,,,w,2
+46,volunteering,5,5,5,5,-5,,,w,2
+47,diet restriction,0,0,5,10,0,,,w,2
+48,Daily Regiment,0,-5,10,10,0,,,w,3
+49,Faithful Deliberation,0,0,10,20,0,,,w,3
+
+

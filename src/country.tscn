@@ -5,10 +5,6 @@
 [node name="Country" type="Node2D"]
 script = ExtResource("1_711qb")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-autostart = true
-
 [node name="Panel" type="Panel" parent="."]
 offset_left = -3.0
 offset_top = 1.0
@@ -54,5 +50,3 @@ text = "Actors: "
 [node name="ActorVal" type="Label" parent="Panel/GridContainer"]
 layout_mode = 2
 text = "0"
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

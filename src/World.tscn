@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://bar3twhxb5lks"]
+
+[ext_resource type="Script" path="res://src/World.gd" id="1_skylc"]
+[ext_resource type="PackedScene" uid="uid://b2rh2vtvbxfks" path="res://src/transformations.tscn" id="2_5gv21"]
+[ext_resource type="PackedScene" uid="uid://d2sp1x0xfafyc" path="res://src/Ideology.tscn" id="3_lppiv"]
+[ext_resource type="PackedScene" uid="uid://der47yc2tnjrh" path="res://src/country.tscn" id="4_05ndq"]
+[ext_resource type="Texture2D" uid="uid://cu0kya6aioflb" path="res://advisor.png" id="5_tjwj0"]
+[ext_resource type="PackedScene" uid="uid://beii1tabwkdrf" path="res://src/ideology_page.tscn" id="6_mwbul"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5cbo"]
+atlas = ExtResource("5_tjwj0")
+region = Rect2(0, 0, 724, 772)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5p6o"]
+atlas = ExtResource("5_tjwj0")
+region = Rect2(724, 0, 724, 772)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk8m1"]
+atlas = ExtResource("5_tjwj0")
+region = Rect2(1448, 0, 724, 772)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfqy3"]
+atlas = ExtResource("5_tjwj0")
+region = Rect2(2172, 0, 724, 772)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g02e8"]
+atlas = ExtResource("5_tjwj0")
+region = Rect2(2896, 0, 724, 772)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foe86"]
+atlas = ExtResource("5_tjwj0")
+region = Rect2(3620, 0, 724, 772)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fo6f2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5cbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5p6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk8m1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfqy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g02e8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foe86")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_skylc")
+
+[node name="Transformations" parent="." instance=ExtResource("2_5gv21")]
+position = Vector2(0, 0)
+
+[node name="Ideology" parent="." instance=ExtResource("3_lppiv")]
+position = Vector2(1, 0)
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 916.0
+offset_top = 580.0
+offset_right = 1151.0
+offset_bottom = 647.0
+
+[node name="Country" parent="." instance=ExtResource("4_05ndq")]
+position = Vector2(760, 2)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Advisor" type="AnimatedSprite2D" parent="."]
+position = Vector2(609, 477)
+scale = Vector2(0.361878, 0.360104)
+sprite_frames = SubResource("SpriteFrames_fo6f2")
+
+[node name="Ideology Page" parent="." instance=ExtResource("6_mwbul")]
+position = Vector2(1, 648)
+scale = Vector2(0.7, 0.7)
+
+[connection signal="add_transformation" from="Transformations" to="Ideology" method="_on_transformations_add_transformation"]
+[connection signal="attribute_update" from="Ideology" to="Ideology Page" method="_on_ideology_attribute_update"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

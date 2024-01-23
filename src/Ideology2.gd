@@ -19,7 +19,6 @@ func _process(delta):
 
 
 func _on_area_2d_mouse_entered():
-	print("EE")
 	pass # Replace with function body.
 
 
@@ -38,7 +37,6 @@ func update_attributes(transformation):
 	for i in range(len(transformation)):
 		attributes[i] += transformation[i]
 	var idx = 0
-	print("eee")
 	for i in $Attributes/Container.get_children():
 		print(i)
 		i.val.text = attributes[idx]
