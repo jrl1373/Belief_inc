@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://1tu66jpwgd2c"]
+
+[ext_resource type="Script" path="res://src/Ideology/IdeologyAttDisplay.gd" id="1_j75hp"]
+[ext_resource type="Texture2D" uid="uid://cd0ym77lq1s2c" path="res://UI/textbox.png" id="3_iwwwf"]
+
+[node name="Ideology" type="Node2D"]
+position = Vector2(1, 3)
+script = ExtResource("1_j75hp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="Attributes" type="VBoxContainer" parent="."]
+offset_left = 19.0
+offset_top = 17.0
+offset_right = 253.0
+offset_bottom = 163.0
+
+[node name="AttributePanel" type="Sprite2D" parent="Attributes"]
+position = Vector2(114, 74)
+scale = Vector2(1.10833, 1.34259)
+texture = ExtResource("3_iwwwf")
+
+[node name="Spotlight" type="HBoxContainer" parent="Attributes"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="Attributes/Spotlight"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Spotlight: "
+
+[node name="val" type="Label" parent="Attributes/Spotlight" groups=["attribute_values"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Aesthetics" type="HBoxContainer" parent="Attributes"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="Attributes/Aesthetics"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Aesthetics: "
+
+[node name="val" type="Label" parent="Attributes/Aesthetics" groups=["attribute_values"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="HBoxContainer" parent="Attributes"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="Attributes/Control"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Control: "
+
+[node name="val" type="Label" parent="Attributes/Control" groups=["attribute_values"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Wellness" type="HBoxContainer" parent="Attributes"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="Attributes/Wellness"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Wellness: "
+
+[node name="val" type="Label" parent="Attributes/Wellness" groups=["attribute_values"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Income" type="HBoxContainer" parent="Attributes"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="Attributes/Income"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Income: "
+
+[node name="val" type="Label" parent="Attributes/Income" groups=["attribute_values"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)

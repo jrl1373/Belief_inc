@@ -16,17 +16,17 @@ func sigmoid_test():
 func calculate_population_change(spotlight,aesthetics,control):
 	var non_believers = population - (aware + followers + actors)
 	var effectiveness = sigmoid_test()
-	var new_aware =  non_believers * spotlight/100 * effectiveness * DIFF_MOD
+	var new_aware =  max(0,non_believers * spotlight/100 * effectiveness * DIFF_MOD)
 	print(new_aware)
 	aware += new_aware
 	var non_followers = aware - (followers + actors)
-	var new_followers = non_followers * aesthetics/100 * effectiveness * DIFF_MOD
+	var new_followers =  max(0,non_followers * aesthetics/100 * effectiveness * DIFF_MOD)
 	print(new_followers)
 	aware -= new_followers
 	followers += new_followers
 	
 	var non_actors = followers - actors
-	var new_actors = non_actors * control/100 * effectiveness * DIFF_MOD
+	var new_actors = max(0,non_actors * control/100 * effectiveness * DIFF_MOD)
 	print(new_followers)
 	followers -= new_actors
 	actors += new_actors
@@ -38,9 +38,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Panel/GridContainer/AwareVal.text = str(int(aware))
-	$Panel/GridContainer/FollowersVal.text = str(int(followers))
-	$Panel/GridContainer/ActorVal.text = str(int(actors))
+	$GridContainer/AwareVal.text = str(int(aware))
+	$GridContainer/FollowersVal.text = str(int(followers))
+	$GridContainer/ActorVal.text = str(int(actors))
 	pass
 
 func calculate_believers():

@@ -10,13 +10,14 @@ var added = false
 signal add_transformation
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$MContainer/Panel/Title.text = title
-	$MContainer/Panel/Flavor.text = flavor
-	$MContainer/Panel/Image.texture = load(image)
+	$Title.text = title
+	$Flavor.text = flavor
+#	$MContainer/Panel/Image.texture = load(image)
 	for i in range(len(attributes)):
 		var label = Label.new()
+		label.add_theme_color_override("font_color","Black")
 		label.text = attribute_names[i] + ": "+  str(attributes[i])
-		$MContainer/Panel/Attributes.add_child(label)
+		$Attributes.add_child(label)
 	pass # Replace with function body.
 	
 

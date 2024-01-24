@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://bie6kxy6mfuc6"]
+
+[ext_resource type="Script" path="res://src/World/Country.gd" id="1_w3210"]
+[ext_resource type="Texture2D" uid="uid://cd0ym77lq1s2c" path="res://UI/textbox.png" id="2_4cl5a"]
+
+[node name="Country" type="Node2D"]
+script = ExtResource("1_w3210")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.1625, 1.15556)
+texture = ExtResource("2_4cl5a")
+centered = false
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 14.0
+offset_top = 9.0
+offset_right = 270.0
+offset_bottom = 136.0
+columns = 2
+
+[node name="PopText" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Population: "
+
+[node name="PopVal" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="AwareText" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Aware: "
+
+[node name="AwareVal" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="FollowersText" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Followers: "
+
+[node name="FollowersVal" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="ActorText" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Actors: "
+
+[node name="ActorVal" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"

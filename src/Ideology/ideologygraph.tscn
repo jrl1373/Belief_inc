@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://beii1tabwkdrf"]
 
-[ext_resource type="Script" path="res://src/Ideology Page.gd" id="1_hudbh"]
+[ext_resource type="Script" path="res://src/Ideology/IdeologyGraph.gd" id="1_ws8yq"]
 [ext_resource type="Texture2D" uid="uid://3csrugllsoa0" path="res://attributes_final/asthetics.png" id="2_ayk3a"]
 [ext_resource type="Texture2D" uid="uid://3h5iy2j0k4kp" path="res://attributes_final/initiative.png" id="3_rule6"]
 [ext_resource type="Texture2D" uid="uid://bw40w1kkhhp5h" path="res://attributes_final/spotlight.png" id="4_oggid"]
 [ext_resource type="Texture2D" uid="uid://bpbsrbbx2hh8b" path="res://attributes_final/wellness.png" id="5_h2in1"]
 [ext_resource type="Texture2D" uid="uid://cjo3jwhk7eaaw" path="res://attributes_final/wealth.png" id="6_pouiw"]
 
-[node name="Ideology Page" type="Node2D"]
-script = ExtResource("1_hudbh")
+[node name="IdeologyGraph" type="Node2D"]
+script = ExtResource("1_ws8yq")
 
 [node name="Aesthetics" type="Sprite2D" parent="."]
 position = Vector2(150, -50)

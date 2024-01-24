@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2rh2vtvbxfks"]
 
-[ext_resource type="Script" path="res://src/Transformations.gd" id="1_1q8uo"]
-[ext_resource type="PackedScene" uid="uid://bc2m72joy5va" path="res://src/transformation.tscn" id="2_5df1d"]
-[ext_resource type="PackedScene" uid="uid://cq8ujnjjx0ow2" path="res://src/TransformationNode.tscn" id="3_wqmmr"]
+[ext_resource type="Script" path="res://src/Transformation/Transformations.gd" id="1_7jdyr"]
+[ext_resource type="PackedScene" uid="uid://cc62h4komyljd" path="res://src/Transformation/transformation.tscn" id="2_4y0if"]
+[ext_resource type="PackedScene" uid="uid://cq8ujnjjx0ow2" path="res://src/Transformation/TransformationNode.tscn" id="3_xupxu"]
 
 [node name="Transformations" type="Node2D"]
 position = Vector2(-2, 4)
-script = ExtResource("1_1q8uo")
-transformation_scn = ExtResource("2_5df1d")
-transformation_nd = ExtResource("3_wqmmr")
+script = ExtResource("1_7jdyr")
+transformation_scn = ExtResource("2_4y0if")
+transformation_nd = ExtResource("3_xupxu")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_left = 2.0

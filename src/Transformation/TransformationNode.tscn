@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq8ujnjjx0ow2"]
+
+[ext_resource type="Script" path="res://src/Transformation/TransformationNode.gd" id="1_igkyk"]
+[ext_resource type="PackedScene" uid="uid://cc62h4komyljd" path="res://src/Transformation/transformation.tscn" id="2_hxqwr"]
+
+[node name="TransformationNode" type="Button"]
+script = ExtResource("1_igkyk")
+transformation_card = ExtResource("2_hxqwr")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

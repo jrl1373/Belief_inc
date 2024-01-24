@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc62h4komyljd"]
+
+[ext_resource type="Script" path="res://src/Transformation/transformation.gd" id="1_vjy0y"]
+[ext_resource type="Texture2D" uid="uid://cd0ym77lq1s2c" path="res://UI/textbox.png" id="2_ji57m"]
+[ext_resource type="Texture2D" uid="uid://cv8s2wiye80nj" path="res://UI/button.png" id="3_y5v5o"]
+
+[node name="Transformation" type="Node2D"]
+script = ExtResource("1_vjy0y")
+
+[node name="MContainer" type="MarginContainer" parent="."]
+offset_right = 381.0
+offset_bottom = 413.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(188, 205.25)
+scale = Vector2(1.55833, 3.06296)
+texture = ExtResource("2_ji57m")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 359.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Text!"
+horizontal_alignment = 1
+
+[node name="Attributes" type="VBoxContainer" parent="."]
+offset_left = 19.0
+offset_top = 89.0
+offset_right = 359.0
+offset_bottom = 229.0
+
+[node name="Flavor" type="Label" parent="."]
+offset_left = 21.0
+offset_top = 262.0
+offset_right = 358.0
+offset_bottom = 320.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 230.0
+offset_top = 327.0
+offset_right = 362.0
+offset_bottom = 389.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Button"]
+position = Vector2(65, 30)
+scale = Vector2(1.1, 1)
+texture = ExtResource("3_y5v5o")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 132.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Add
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -7,6 +7,7 @@ var inspiration = 0
 var aware = 0
 var followers = 0
 var actors = 0
+
 signal attribute_update(transformation)
 
 # Called when the node enters the scene tree for the first time.
@@ -42,10 +43,10 @@ func update_attributes(transformation):
 	var idx = 0
 	print("eee")
 	attribute_update.emit(attributes)
-	for i in $Attributes/Container.get_children():
-		var val = i.get_child(1)
+	var vals = get_tree().get_nodes_in_group("attribute_values")
+	for val in vals:
 		val.text = str(attributes[idx])
-		idx += 1
+		idx+=1
 		
 		
 	

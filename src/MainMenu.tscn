@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://dftdpop88isxs"]
+
+[ext_resource type="Texture2D" uid="uid://bprosywphmbiu" path="res://Screens/Title/title_concept.png" id="1_kqce0"]
+[ext_resource type="Script" path="res://src/Main.gd" id="1_rqe2b"]
+[ext_resource type="Texture2D" uid="uid://cv8s2wiye80nj" path="res://UI/button.png" id="2_0d74g"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_rqe2b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(441, 162.75)
+scale = Vector2(3.66667, 2.4037)
+texture = ExtResource("1_kqce0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_top = 320.0
+offset_right = 881.0
+offset_bottom = 542.0
+color = Color(0, 0, 0, 1)
+
+[node name="Start" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 54.0
+offset_right = 472.0
+offset_bottom = 118.0
+text = "Start"
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/Start"]
+position = Vector2(62, 32)
+texture = ExtResource("2_0d74g")
+
+[node name="Label" type="Label" parent="ColorRect/Start"]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ColorRect/Start" to="." method="_on_button_pressed"]
