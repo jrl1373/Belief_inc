@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bar3twhxb5lks"]
+[gd_scene load_steps=15 format=3 uid="uid://bar3twhxb5lks"]
 
 [ext_resource type="Script" path="res://src/World/World.gd" id="1_c31vw"]
 [ext_resource type="PackedScene" uid="uid://b2rh2vtvbxfks" path="res://src/Transformation/transformations.tscn" id="2_fwwft"]
+[ext_resource type="Texture2D" uid="uid://dqia4ghcxmn6u" path="res://Screens/World/map1.png" id="2_teuru"]
 [ext_resource type="PackedScene" uid="uid://1tu66jpwgd2c" path="res://src/Ideology/IdeologyAttDisplay.tscn" id="3_xncul"]
 [ext_resource type="PackedScene" uid="uid://bie6kxy6mfuc6" path="res://src/World/country.tscn" id="4_si4ar"]
 [ext_resource type="Texture2D" uid="uid://cu0kya6aioflb" path="res://advisor.png" id="5_ajwdv"]
@@ -59,6 +60,9 @@ animations = [{
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_c31vw")
+
+[node name="Map" type="Sprite2D" parent="."]
+texture = ExtResource("2_teuru")
 
 [node name="Transformations" parent="." instance=ExtResource("2_fwwft")]
 position = Vector2(0, 0)
