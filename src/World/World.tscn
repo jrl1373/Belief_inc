@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bar3twhxb5lks"]
+[gd_scene load_steps=17 format=3 uid="uid://bar3twhxb5lks"]
 
 [ext_resource type="Script" path="res://src/World/World.gd" id="1_c31vw"]
 [ext_resource type="PackedScene" uid="uid://ba6ma87p1moch" path="res://src/Jans/Jan.tscn" id="2_7mhah"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cu0kya6aioflb" path="res://advisor.png" id="5_ajwdv"]
 [ext_resource type="PackedScene" uid="uid://faehjljcyf24" path="res://src/UI/Button.tscn" id="7_f60i3"]
 [ext_resource type="PackedScene" uid="uid://csrx77tqp75i2" path="res://src/Ideology/ResouceDisplay.tscn" id="8_3v47i"]
+[ext_resource type="PackedScene" uid="uid://bgbjtxbv8lltt" path="res://src/TalkingAdvisor.tscn" id="9_yi1st"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o5cbo"]
 atlas = ExtResource("5_ajwdv")
@@ -89,6 +90,9 @@ text = "Ideology"
 
 [node name="ResouceDisplay" parent="." instance=ExtResource("8_3v47i")]
 position = Vector2(264, 1)
+
+[node name="TalkingAdvisor" parent="." instance=ExtResource("9_yi1st")]
+position = Vector2(535, 490)
 
 [connection signal="new_actors" from="Country" to="." method="_on_country_new_actors"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

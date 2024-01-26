@@ -33,5 +33,5 @@ func update_display():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	update_display()
+#	update_display()
 	pass

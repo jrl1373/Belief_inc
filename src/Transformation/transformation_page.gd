@@ -5,7 +5,8 @@ var att_map = ['s','a','c','w','i']
 var tier = "1"
 var idx = 0
 var ideology
-var transformation = load("res://src/Transformation/transformations.gd").new()
+var added_transformations = []
+var transformation = load("res://src/Transformation/Transformations.gd").new()
 var transformation_dict = transformation.import_transformations("res://Final_Transformation_List.txt")
 signal add_transformation(attributes)
 # Called when the node enters the scene tree for the first time.
@@ -65,12 +66,13 @@ func _on_transformation_add_transformation(attributes):
 		print("error")
 	elif int(tier) == 3 and total_transforms < 6:
 		print("error")
-	else:	
+	elif !added_transformations.has(Vector2(int(tier),int(idx))):	
 		var cost = 10+20*(int(tier)-1)
 		if ideology.inspiration >= cost:
 			ideology.add_inspiration(-1*cost)
 			branch_transformations[att_map.find(branch)] += 1
 			update_filter()
+			added_transformations.append(Vector2(int(tier),int(idx)))
 			add_transformation.emit(attributes)
 		else:
 			print("error")
