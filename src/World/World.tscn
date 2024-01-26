@@ -90,5 +90,6 @@ text = "Ideology"
 [node name="ResouceDisplay" parent="." instance=ExtResource("8_3v47i")]
 position = Vector2(264, 1)
 
+[connection signal="new_actors" from="Country" to="." method="_on_country_new_actors"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="IdeologyButton" to="." method="_on_ideology_button_pressed"]

@@ -7,6 +7,7 @@ var followers = 0
 var actors = 0
 var leftovers = population
 var e = 2.71828
+signal new_actors(new_actors)
 func sigmoid_test(percent_complete):
 	var i = 10*(percent_complete-.5)
 	var sigmoid = 1/(1+pow(e,-1*i))
@@ -28,11 +29,11 @@ func calculate_population_change(spotlight,aesthetics,control):
 	followers += new_followers
 	var non_actors = followers - actors
 	effectiveness = sigmoid_test(float(followers-non_actors)/float(followers))
-	var new_actors = max(0,non_actors * control/100 * effectiveness * DIFF_MOD)
+	var new_actor_val = max(0,non_actors * control/100 * effectiveness * DIFF_MOD)
 
-	followers -= new_actors
-	actors += new_actors
-	
+	followers -= new_actor_val
+	actors += new_actor_val
+	new_actors.emit(new_actor_val)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass

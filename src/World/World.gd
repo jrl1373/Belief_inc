@@ -7,7 +7,7 @@ var mapspeed = 100
 var map_angle = randf()*2*PI
 var width
 var height
-var max_jans = 2000
+var max_jans = 50
 var current_jans = 0
 var paused = false
 var ideology = load("res://src/Ideology/Ideology.gd").new()
@@ -31,6 +31,7 @@ func _ready():
 	print("current Ideology")
 	print($IdeologyDisplay.get_ideology())
 	$Advisor.play()
+	$Advisor.scale = Vector2(.1,.1)
 	get_tree().call_group("jans","play")
 	add_child(ideology_page)
 	ideology_page.hide()
@@ -59,21 +60,21 @@ func move_map(delta):
 
 func move_advisor(delta):
 	$Advisor.rotate(1*delta)
-	t+=speed*delta
-	if Input.is_action_pressed("click"):
-		point = get_local_mouse_position()
-		t = 0
-	if point != Vector2(0,0):
-		$Advisor.position = $Advisor.position.lerp(point,t)
+	$Advisor.position = get_local_mouse_position()
+#	t+=speed*delta
+#	if Input.is_action_pressed("click"):
+#	point = get_local_mouse_position()
+#	t = 0
+#	if point != Vector2(0,0):
+#		$Advisor.position = $Advisor.position.lerp(point,t)
 	
 	
 	
 
 func _on_timer_timeout():
 	if !paused:
-		for i in range(10):
-			if current_jans < max_jans:
-				generate_jan()
+		if current_jans < max_jans:
+			generate_jan()
 		var atr = $IdeologyDisplay.attributes
 		var spotlight = atr[0]
 		var aesthetics = atr[1]
@@ -83,8 +84,8 @@ func _on_timer_timeout():
 
 func generate_jan():
 	var new_jan = jan.instantiate()
-	var janx = randi_range(-1*width/2,width/2)
-	var jany = randi_range(-1*height/2,height/2)
+	var janx = randi_range((-1*width/2)+100,(width/2)-100)
+	var jany = randi_range((-1*height/2)+100,(height/2)-100)
 	new_jan.position = $Map.position + Vector2(janx,jany)
 	$Map.add_child(new_jan)
 	var call = Callable(self,"harvested_jan")
@@ -120,3 +121,10 @@ func _on_ideology_button_pressed():
 func pause():
 	paused = true
 
+
+
+func _on_country_new_actors(new_actors):
+	max_jans += new_actors/10
+	for i in range(int(new_actors/10)):
+		generate_jan()
+	pass # Replace with function body.
