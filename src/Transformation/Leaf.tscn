@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cywpuno1wq35p"]
+
+[ext_resource type="Script" path="res://src/Transformation/Leaf.gd" id="1_61pee"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvmml"]
+radius = 25.02
+
+[node name="Leaf" type="Area2D"]
+position = Vector2(103, 375)
+script = ExtResource("1_61pee")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yvmml")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

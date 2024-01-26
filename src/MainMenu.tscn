@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cv8s2wiye80nj" path="res://UI/button.png" id="2_0d74g"]
 
 [node name="MainMenu" type="Node2D"]
+scale = Vector2(1.34092, 1.28869)
 script = ExtResource("1_rqe2b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -18,6 +19,7 @@ offset_top = 320.0
 offset_right = 881.0
 offset_bottom = 542.0
 color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Start" type="Button" parent="ColorRect"]
 layout_mode = 0
@@ -26,6 +28,7 @@ offset_top = 54.0
 offset_right = 472.0
 offset_bottom = 118.0
 text = "Start"
+metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect/Start"]
 position = Vector2(62, 32)
@@ -39,5 +42,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Start"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="ColorRect/Start" to="." method="_on_button_pressed"]

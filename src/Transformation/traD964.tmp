@@ -36,11 +36,5 @@ text = "Wellness"
 position = Vector2(559, 581)
 text = "Income"
 
-[node name="Exit" parent="." instance=ExtResource("1_cm7au")]
-position = Vector2(1035, 583)
-text = "Exit"
-
 [connection signal="load_transformation" from="TransformationBranch" to="." method="_on_transformation_branch_load_transformation"]
-[connection signal="add_transformation" from="Transformation" to="." method="_on_transformation_add_transformation"]
 [connection signal="pressed" from="Btns/SpotlightBtn" to="." method="_on_spotlight_btn_pressed"]
-[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

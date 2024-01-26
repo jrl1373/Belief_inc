@@ -1,0 +1,51 @@
+Id,Name,Spotlight,Aesthetics,Control,Wellness,Income,Flavor,Image,tree,tier
+0,"""Generous""",5,5,5,5,-5,"""please take one, I insist. now have you heard about...""",,a,1
+1,"""Non-materialistic""",-5,10,15,5,-10,"""the material world only distracts us from our mission""",,a,1
+2,Decentralized,5,10,-5,5,0,"""the only authority is yourself""",,a,2
+3,Hedonistic,5,15,5,-10,0,"""how can it be bad when it feels so good?""",,a,2
+4,Progressive,5,5,5,0,0,"""the only way to move is forward""",,a,2
+5,Symbolistic,5,10,0,0,0,"""this isn't just about green eggs is it?""",,a,2
+6,Open minded,-5,15,-5,10,,"""calm down, let's hear him out""",,a,2
+7,Populist,10,15,-10,0,,"""power to the people""",,a,2
+8,Self Discovery,5,20,-10,5,0,"""the most important journey is your own""",,a,3
+9,Forgive the past,5,25,-10,5,0,"""let go of the past, and let's move towards the future""",,a,3
+10,"""Congregatative""",5,0,10,0,0,"""there's something special about coming together""",,c,1
+11,"""Critical""",5,0,10,0,0,"""that's just an obvious fallacy, and let me tell you why""",,c,1
+12,"""Aggressive""",5,0,15,-5,0,"""sometimes it's necessary to get what you want""",,c,2
+13,"""Centralized""",0,-5,20,0,0,"""unity under one voice is necessary to get through the chaos, and that voice is mine""",,c,2
+14,"""Totalitarian""",0,-5,20,-5,5,"""everyone knows I'm right, I'm just making sure everyone knows I'm right""",,c,3
+15,"""Closed off""",-10,5,15,5,,"""I'm not so sure we want you here""",,c,2
+16,"""Accelerationist""",5,5,10,-5,0,"""sometimes you have to burn the forest for its rebirth""",,c,2
+17,"""Regressive""",0,0,15,0,0,"""we had it right all along, now let's just go back to the way things were""",,c,2
+18,"""Inner circle""",-5,0,20,0,10,"""A∴A∴""",,c,3
+19,"""Hierarchy""",0,0,10,0,5,"""structure is necessary to build anything worthwhile""",,c,2
+20,"""Materialistic""",5,0,0,5,5,"""Stuff is the only real thing out there""",,i,1
+21,"""Hoarders""",0,-5,5,-5,20,"""reality is just a bunch of stuff, and it's going to be mine""",,i,2
+22,"""Financially literate""",0,0,0,5,10,"""now all our members have a 401k, just sign here and we can start""",,i,1
+23,"""savers""",0,,5,5,5,"""preparing for the future just makes sense""",,i,2
+24,"""selfish""",-5,-5,5,0,20,"""why should I help you if I'm just better at helping myself than you are?""",,i,2
+25,"""pro banking""",0,-5,5,-5,20,"""the world was built on the backs of bankers, and you should remember that""",,i,2
+26,"""hard working""",0,5,5,5,5,"""the only way to get things done is to do it yourself""",,i,2
+27,"""tithe""",0,-10,10,-5,20,"""our mission requires dedication, and that doesn't just mean your time""",,i,2
+28,"""All is mine""",0,-15,10,-15,40,""" just give me everything and let me worry about the rest""",,i,3
+29,"""Seizing Production""",0,0,0,-10,30,"""the world would be  better if I controlled it""",,i,3
+30,"""Publishers""",10,0,0,0,5,"""the pen is mightier than the sword""",,s,1
+31,"""Evangelical""",20,0,5,-5,-5,"""the good word is best received in person""",,s,2
+32,"""Artistic""",10,10,0,0,-5,"""there is something deep within us waiting to get out""",,s,1
+33,"""talkative""",10,0,0,5,0,"""don't even get me started about ...""",,s,2
+34,"""socially active""",10,0,0,5,0,"""how about that game last night? dicky really threw that ball huh""",,s,2
+35,"""Protesting""",15,-5,5,0,0,"""it's time we spoke with our actions instead of our words""",,s,2
+36,"""Street Gospel""",20,-5,0,-5,0,"""the best time to talk to someone is when they're busy walking  somewhere""",,s,2
+37,"""Convincing""",15,5,0,0,-5,"""our awesome  stuff is way better than their stupid stuff""",,s,2
+38,"""double speek""",20,-5,10,-10,0,"""war? don't you mean peace?""",,s,3
+39,"""Media Controlling""",40,10,0,0,-30,"""live from Channel 5 news, there is nothing to be alarmed about""",,s,3
+40,"""Collaborative""",5,5,5,5,0,,,w,1
+41,"""Book worms""",0,0,5,5,0,,,w,1
+42,"""Passive""",-5,5,10,5,0,,,w,2
+43,"""Democratic""",5,5,-5,5,0,,,w,2
+44,"""Stoic""",0,5,0,10,0,,,w,2
+45,"""Collectivist""",5,10,-5,10,-5,,,w,2
+46,"""volunteering""",5,5,5,5,-5,,,w,2
+47,"""diet restriction""",0,0,5,10,0,,,w,2
+48,"""Daily Regiment""",0,-5,10,10,0,,,w,3
+49,"""Faithful Deliberation""",0,0,10,20,0,,,w,3

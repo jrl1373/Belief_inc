@@ -7,7 +7,7 @@ var image = "res://icon.svg"
 var attributes = [0,0,0,0,0]
 var flavor = ""
 var added = false
-signal add_transformation
+signal add_transformation(attributes)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Title.text = title
@@ -27,14 +27,25 @@ func _process(delta):
 	pass
 	
 func init(vals):
+	print("e")
 	self.title = vals[1]
 	self.attributes = vals.slice(2,7)
 	self.image = vals[7]
 	self.flavor = vals[8]
+	update_transformation()
 
-	
+func update_transformation():
+	$Title.text = title
+	$Flavor.text = flavor
+#	$MContainer/Panel/Image.texture = load(image)
+	var idx = 0
+	for i in $Attributes.get_children():
+		var label = i
+		label.text = attribute_names[idx] + ": "+  str(attributes[idx])
+		idx += 1
+	pass # Replace with function body.
+		
 
 
 func _on_button_pressed():
-	add_transformation.emit()
-
+	add_transformation.emit(attributes)

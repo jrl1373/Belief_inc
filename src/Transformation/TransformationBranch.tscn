@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdxwtk00ge4m5"]
+
+[ext_resource type="Script" path="res://src/Transformation/TransformationBranch.gd" id="1_m3swv"]
+[ext_resource type="Texture2D" uid="uid://dev55ml2iqnvn" path="res://leaf_spotlight_tree.png" id="1_php3a"]
+[ext_resource type="PackedScene" uid="uid://cywpuno1wq35p" path="res://src/Transformation/Leaf.tscn" id="2_xym53"]
+
+[node name="TransformationBranch" type="Node2D"]
+script = ExtResource("1_m3swv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5.4, 2.7)
+texture = ExtResource("1_php3a")
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 725.0
+offset_top = 1.0
+offset_right = 1156.0
+offset_bottom = 649.0
+color = Color(0, 0, 0, 1)
+
+[node name="Leaf" parent="." groups=["leaves"] instance=ExtResource("2_xym53")]
+position = Vector2(105, 374)
+scale = Vector2(1.16, 0.753582)
+tier = 1
+
+[node name="Leaf2" parent="." groups=["leaves"] instance=ExtResource("2_xym53")]
+position = Vector2(570, 393)
+scale = Vector2(1.39466, 0.507001)
+tier = 1
+idx = 1
+
+[node name="Leaf4" parent="." groups=["leaves"] instance=ExtResource("2_xym53")]
+position = Vector2(98, 315)
+scale = Vector2(1, 0.48)
+tier = 2
+idx = 1
+
+[node name="Leaf3" parent="." groups=["leaves"] instance=ExtResource("2_xym53")]
+position = Vector2(78, 249)
+tier = 2
+
+[node name="Leaf5" parent="." groups=["leaves"] instance=ExtResource("2_xym53")]
+position = Vector2(246, 258)
+scale = Vector2(1, 0.620436)
+tier = 2
+idx = 2
+
+[node name="Leaf6" parent="." groups=["leaves"] instance=ExtResource("2_xym53")]
+position = Vector2(449, 192)
+scale = Vector2(1.24, 0.640001)
+tier = 2
+idx = 3
+
+[node name="leaf7" parent="." groups=["leaves"] instance=ExtResource("2_xym53")]
+position = Vector2(467, 315)
+scale = Vector2(1.58879, 0.531713)
+tier = 2
+idx = 4
+
+[node name="Leaf8" parent="." groups=["leaves"] instance=ExtResource("2_xym53")]
+position = Vector2(620, 287)
+scale = Vector2(1.13456, 0.645494)
+tier = 2
+idx = 5
+
+[node name="Leaf9" parent="." groups=["leaves"] instance=ExtResource("2_xym53")]
+position = Vector2(116, 119)
+scale = Vector2(1.1916, 0.8711)
+tier = 3
+
+[node name="Leaf10" parent="." groups=["leaves"] instance=ExtResource("2_xym53")]
+position = Vector2(374, 50)
+scale = Vector2(-1.58744, 0.771991)
+tier = 3
+idx = 1
