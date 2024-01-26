@@ -1,3 +1,55 @@
-[gd_scene format=3 uid="uid://ce4vsrh3js88e"]
+[gd_scene load_steps=9 format=3 uid="uid://ce4vsrh3js88e"]
+
+[ext_resource type="Texture2D" uid="uid://crbauh16hsu1c" path="res://Screens/Ideology/Ideology_left.png" id="1_lncxc"]
+[ext_resource type="Script" path="res://src/Ideology/IdeologyPage.gd" id="1_v1nnr"]
+[ext_resource type="Texture2D" uid="uid://bq5cci5xtaaou" path="res://Screens/Ideology/tree_right.png" id="2_ufr3l"]
+[ext_resource type="PackedScene" uid="uid://beii1tabwkdrf" path="res://src/Ideology/ideologygraph.tscn" id="3_g30sw"]
+[ext_resource type="PackedScene" uid="uid://1tu66jpwgd2c" path="res://src/Ideology/IdeologyAttDisplay.tscn" id="4_im1c1"]
+[ext_resource type="PackedScene" uid="uid://faehjljcyf24" path="res://src/UI/Button.tscn" id="6_jymr6"]
+[ext_resource type="PackedScene" uid="uid://csrx77tqp75i2" path="res://src/Ideology/ResouceDisplay.tscn" id="7_bqyjr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4paxn"]
+size = Vector2(35.1549, 51.7782)
 
 [node name="IdeologyPage" type="Node2D"]
+script = ExtResource("1_v1nnr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.8, 16.2356)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(216, 378)
+texture = ExtResource("1_lncxc")
+
+[node name="Area2D" type="Area2D" parent="Tree"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree/Area2D"]
+position = Vector2(8.17455, 89)
+scale = Vector2(8.86509, 7.02999)
+shape = SubResource("RectangleShape2D_4paxn")
+
+[node name="Dudes" type="Sprite2D" parent="."]
+position = Vector2(969, 378)
+texture = ExtResource("2_ufr3l")
+
+[node name="IdeologyGraph" parent="." instance=ExtResource("3_g30sw")]
+position = Vector2(390, 649)
+scale = Vector2(0.8, 0.8)
+
+[node name="Ideology" parent="." instance=ExtResource("4_im1c1")]
+position = Vector2(0, 3)
+
+[node name="ExitBtn" parent="." instance=ExtResource("6_jymr6")]
+position = Vector2(1032, 584)
+text = "exit"
+
+[node name="ResouceDisplay" parent="." instance=ExtResource("7_bqyjr")]
+position = Vector2(264, 7)
+
+[connection signal="input_event" from="Tree/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="attribute_update" from="Ideology" to="IdeologyGraph" method="_on_ideology_attribute_update"]
+[connection signal="pressed" from="ExitBtn" to="." method="_on_exit_btn_pressed"]

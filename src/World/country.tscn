@@ -21,7 +21,7 @@ columns = 2
 [node name="PopText" type="Label" parent="GridContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Population: "
+text = "Targets: "
 
 [node name="PopVal" type="Label" parent="GridContainer"]
 layout_mode = 2

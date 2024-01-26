@@ -37,6 +37,7 @@ offset_top = 262.0
 offset_right = 358.0
 offset_bottom = 320.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 2
 
 [node name="Button" type="Button" parent="."]
 offset_left = 230.0
@@ -59,5 +60,21 @@ text = "Add
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Cost" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 343.0
+offset_right = 86.0
+offset_bottom = 378.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Cost:"
+
+[node name="Val" type="Label" parent="Cost"]
+layout_mode = 0
+offset_left = 43.0
+offset_right = 83.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

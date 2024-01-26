@@ -1,0 +1,78 @@
+[gd_scene load_steps=12 format=3 uid="uid://ba6ma87p1moch"]
+
+[ext_resource type="Script" path="res://src/Jans/Jan.gd" id="1_5fn5v"]
+[ext_resource type="Texture2D" uid="uid://dncvmnxiy1jop" path="res://Screens/World/animations/jan.png" id="2_r1j6w"]
+[ext_resource type="Texture2D" uid="uid://dqvxj0773o4ye" path="res://Screens/World/animations/jan sleep.png" id="3_1855x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpnfg"]
+atlas = ExtResource("2_r1j6w")
+region = Rect2(0, 0, 18, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1pg0"]
+atlas = ExtResource("2_r1j6w")
+region = Rect2(18, 0, 18, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bii1q"]
+atlas = ExtResource("3_1855x")
+region = Rect2(0, 0, 31, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ectih"]
+atlas = ExtResource("3_1855x")
+region = Rect2(124, 0, 31, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5353d"]
+atlas = ExtResource("3_1855x")
+region = Rect2(248, 0, 31, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg8tj"]
+atlas = ExtResource("3_1855x")
+region = Rect2(372, 0, 31, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbr7e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpnfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1pg0")
+}],
+"loop": true,
+"name": &"Jan_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bii1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ectih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5353d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lg8tj")
+}],
+"loop": true,
+"name": &"jan_sleep",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fsgy2"]
+size = Vector2(34, 36)
+
+[node name="Jan" type="Node2D"]
+script = ExtResource("1_5fn5v")
+
+[node name="Jan1" type="AnimatedSprite2D" parent="." groups=["jans"]]
+position = Vector2(17, 18)
+sprite_frames = SubResource("SpriteFrames_qbr7e")
+animation = &"jan_sleep"
+
+[node name="Area2D" type="Area2D" parent="Jan1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jan1/Area2D"]
+shape = SubResource("RectangleShape2D_fsgy2")
+
+[connection signal="mouse_entered" from="Jan1/Area2D" to="." method="_on_area_2d_mouse_entered"]

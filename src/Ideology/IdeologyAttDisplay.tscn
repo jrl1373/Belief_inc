@@ -7,9 +7,6 @@
 position = Vector2(1, 3)
 script = ExtResource("1_j75hp")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 324)
-
 [node name="Attributes" type="VBoxContainer" parent="."]
 offset_left = 19.0
 offset_top = 17.0
@@ -29,7 +26,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Spotlight: "
 
-[node name="val" type="Label" parent="Attributes/Spotlight" groups=["attribute_values"]]
+[node name="sval" type="Label" parent="Attributes/Spotlight" groups=["attribute_values"]]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
@@ -41,7 +38,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Aesthetics: "
 
-[node name="val" type="Label" parent="Attributes/Aesthetics" groups=["attribute_values"]]
+[node name="aval" type="Label" parent="Attributes/Aesthetics" groups=["attribute_values"]]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
@@ -53,7 +50,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Control: "
 
-[node name="val" type="Label" parent="Attributes/Control" groups=["attribute_values"]]
+[node name="cval" type="Label" parent="Attributes/Control" groups=["attribute_values"]]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
@@ -65,7 +62,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Wellness: "
 
-[node name="val" type="Label" parent="Attributes/Wellness" groups=["attribute_values"]]
+[node name="wval" type="Label" parent="Attributes/Wellness" groups=["attribute_values"]]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
@@ -77,6 +74,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Income: "
 
-[node name="val" type="Label" parent="Attributes/Income" groups=["attribute_values"]]
+[node name="ival" type="Label" parent="Attributes/Income" groups=["attribute_values"]]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)

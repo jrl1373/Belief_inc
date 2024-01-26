@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcvgp1q13safn"]
+[gd_scene load_steps=6 format=3 uid="uid://dcvgp1q13safn"]
 
 [ext_resource type="PackedScene" uid="uid://faehjljcyf24" path="res://src/UI/Button.tscn" id="1_cm7au"]
 [ext_resource type="Script" path="res://src/Transformation/transformation_page.gd" id="1_exjnc"]
 [ext_resource type="PackedScene" uid="uid://bdxwtk00ge4m5" path="res://src/Transformation/TransformationBranch.tscn" id="2_cbo22"]
 [ext_resource type="PackedScene" uid="uid://cc62h4komyljd" path="res://src/Transformation/transformation.tscn" id="3_kvnn8"]
+[ext_resource type="PackedScene" uid="uid://csrx77tqp75i2" path="res://src/Ideology/ResouceDisplay.tscn" id="5_6wjeh"]
 
 [node name="TransformationPage" type="Node2D"]
 script = ExtResource("1_exjnc")
@@ -39,6 +40,14 @@ text = "Income"
 [node name="Exit" parent="." instance=ExtResource("1_cm7au")]
 position = Vector2(1035, 583)
 text = "Exit"
+
+[node name="Filter" type="ColorRect" parent="."]
+offset_right = 715.0
+offset_bottom = 350.0
+color = Color(1, 0, 0, 0.478431)
+
+[node name="ResouceDisplay" parent="." instance=ExtResource("5_6wjeh")]
+position = Vector2(0, -1)
 
 [connection signal="load_transformation" from="TransformationBranch" to="." method="_on_transformation_branch_load_transformation"]
 [connection signal="add_transformation" from="Transformation" to="." method="_on_transformation_add_transformation"]
