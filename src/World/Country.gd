@@ -1,13 +1,14 @@
 extends Node2D
 
 @export var population: int = 100000
-var DIFF_MOD = .1
+var DIFF_MOD = .4
 var aware = 0
 var followers = 0
 var actors = 0
 var leftovers = population
 var e = 2.71828
 signal new_actors(new_actors)
+signal win
 func sigmoid_test(percent_complete):
 	var i = 10*(percent_complete-.5)
 	var sigmoid = 1/(1+pow(e,-1*i))
@@ -39,6 +40,8 @@ func _ready():
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if int(leftovers) <= 0:
+		win.emit()
 	$GridContainer/PopVal.text = str(int(leftovers))
 	$GridContainer/AwareVal.text = str(int(aware))
 	$GridContainer/FollowersVal.text = str(int(followers))

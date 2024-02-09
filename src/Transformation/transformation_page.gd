@@ -5,7 +5,7 @@ var att_map = ['s','a','c','w','i']
 var tier = "1"
 var idx = 0
 var ideology
-var added_transformations = []
+var added_transformations = {"s":[],"a":[],"c":[],"w":[],"i":[]}
 var transformation = load("res://src/Transformation/Transformations.gd").new()
 var transformation_dict = transformation.import_transformations("res://Final_Transformation_List.txt")
 signal add_transformation(attributes)
@@ -30,7 +30,7 @@ func _process(delta):
 	pass
 
 func set_branch(branch):
-	print(branch)
+
 	self.branch = branch
 	update_filter()
 	
@@ -38,7 +38,7 @@ func set_branch(branch):
 
 
 func _on_transformation_branch_load_transformation(tier, idx):
-	print("ssss")
+
 	self.tier = str(tier)
 	self.idx = idx
 	var transform = transformation_dict[branch][self.tier][self.idx]
@@ -57,7 +57,6 @@ func update_filter():
 		$Filter.size.y = 150
 	else:
 		$Filter.size.y = 0
-	print($Filter.size)
 	
 	
 func _on_transformation_add_transformation(attributes):
@@ -66,13 +65,13 @@ func _on_transformation_add_transformation(attributes):
 		print("error")
 	elif int(tier) == 3 and total_transforms < 6:
 		print("error")
-	elif !added_transformations.has(Vector2(int(tier),int(idx))):	
+	elif !added_transformations[branch].has(Vector2(int(tier),int(idx))):	
 		var cost = 10+20*(int(tier)-1)
 		if ideology.inspiration >= cost:
 			ideology.add_inspiration(-1*cost)
 			branch_transformations[att_map.find(branch)] += 1
 			update_filter()
-			added_transformations.append(Vector2(int(tier),int(idx)))
+			added_transformations[branch].append(Vector2(int(tier),int(idx)))
 			add_transformation.emit(attributes)
 		else:
 			print("error")

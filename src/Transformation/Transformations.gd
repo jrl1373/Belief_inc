@@ -13,7 +13,6 @@ func import_transformations(filename):
 		if entry.size() == key.size():
 			transformations[transformations.size()] = entry
 	file.close()
-	print(transformations)
 	for i in transformations.keys():
 		var transform = transformations[i]
 		transformation_dict[transform[9]][transform[10]].append(transform)
@@ -36,7 +35,6 @@ func legacy_transformation_import(transformations):
 
 
 func _on_transformation_added():
-	print("e")
 	pass
 
 func send_transformation(branch,tier,idx):

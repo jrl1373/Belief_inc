@@ -7,7 +7,7 @@ var mapspeed = 100
 var map_angle = randf()*2*PI
 var width
 var height
-var max_jans = 50
+var max_jans = 200
 var current_jans = 0
 var paused = false
 var ideology = load("res://src/Ideology/Ideology.gd").new()
@@ -15,21 +15,17 @@ var ideology_page = load("res://src/Ideology/IdeologyPage.tscn").instantiate()
 var transformation_page = load("res://src/Transformation/transformation_page.tscn").instantiate()
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$WIN.hide()
 	width = $Map.texture.get_width()
 	height = $Map.texture.get_height()
-	print(ideology)
 	ideology_page.set_ideology(ideology)
-	print(transformation_page)
 	ideology_page.set_transformation(transformation_page)
 	ideology_page.connect("exited",func():paused = false )
-	print(ideology_page.transformation)
 	var call = Callable(self,"add_transform")
 	transformation_page.connect("add_transformation",call)
 	transformation_page.set_ideology(ideology)
 	$IdeologyDisplay.set_ideology(ideology)
 	$ResouceDisplay.set_ideology(ideology)
-	print("current Ideology")
-	print($IdeologyDisplay.get_ideology())
 	$Advisor.play()
 	$Advisor.scale = Vector2(.1,.1)
 	get_tree().call_group("jans","play")
@@ -127,4 +123,9 @@ func _on_country_new_actors(new_actors):
 	max_jans += new_actors/10
 	for i in range(int(new_actors/10)):
 		generate_jan()
+	pass # Replace with function body.
+
+
+func _on_country_win():
+	$WIN.show()
 	pass # Replace with function body.

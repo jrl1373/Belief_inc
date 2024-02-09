@@ -13,7 +13,6 @@ func _ready():
 
 
 func signal_transformation(tier,idx):
-	print("e")
 	load_transformation.emit(tier,idx)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/World/World.gd" id="1_c31vw"]
 [ext_resource type="PackedScene" uid="uid://ba6ma87p1moch" path="res://src/Jans/Jan.tscn" id="2_7mhah"]
-[ext_resource type="Texture2D" uid="uid://dqia4ghcxmn6u" path="res://Screens/World/map1.png" id="2_teuru"]
+[ext_resource type="Texture2D" uid="uid://df5tv267c4t1j" path="res://Screens/World/map2.png" id="3_7p1i8"]
 [ext_resource type="PackedScene" uid="uid://1tu66jpwgd2c" path="res://src/Ideology/IdeologyAttDisplay.tscn" id="3_xncul"]
 [ext_resource type="PackedScene" uid="uid://bie6kxy6mfuc6" path="res://src/World/country.tscn" id="4_si4ar"]
 [ext_resource type="Texture2D" uid="uid://cu0kya6aioflb" path="res://advisor.png" id="5_ajwdv"]
@@ -65,7 +65,7 @@ script = ExtResource("1_c31vw")
 jan = ExtResource("2_7mhah")
 
 [node name="Map" type="Sprite2D" parent="."]
-texture = ExtResource("2_teuru")
+texture = ExtResource("3_7p1i8")
 
 [node name="IdeologyDisplay" parent="." instance=ExtResource("3_xncul")]
 position = Vector2(1, 0)
@@ -94,6 +94,17 @@ position = Vector2(264, 1)
 [node name="TalkingAdvisor" parent="." instance=ExtResource("9_yi1st")]
 position = Vector2(535, 490)
 
+[node name="WIN" type="Label" parent="."]
+z_index = 3
+offset_right = 1143.0
+offset_bottom = 658.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "YOU WIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="new_actors" from="Country" to="." method="_on_country_new_actors"]
+[connection signal="win" from="Country" to="." method="_on_country_win"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="IdeologyButton" to="." method="_on_ideology_button_pressed"]

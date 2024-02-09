@@ -16,9 +16,7 @@ func _ready():
 
 
 func set_ideology(ideology):
-	print(ideology)
 	self.ideology = ideology
-	print(self.ideology)
 	
 func get_ideology():
 	return ideology
@@ -29,7 +27,6 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	print("E")
 	ideology.update_attributes([1,1,1,1,1])
 	pass # Replace with function body.
 
@@ -51,7 +48,6 @@ func update_attributes(transformation):
 	for i in range(len(transformation)):
 		attributes[i] += int(transformation[i])
 	var idx = 0
-	print("eee")
 	attribute_update.emit(attributes)
 	var att_order = ['s','a','c','w','i']
 	var vals = get_tree().get_nodes_in_group("attribute_values")
@@ -68,6 +64,5 @@ func get_attribute(Attribute):
 
 func _on_transformations_add_transformation(attributes):
 	ideology.update_attributes(attributes.slice(2,7))
-#	print("added")
 #	update_attributes(attributes.slice(2,7))
 	pass # Replace with function body.

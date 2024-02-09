@@ -28,7 +28,6 @@ func _process(delta):
 	pass
 	
 func init(vals):
-	print("e")
 	self.title = vals[1]
 	self.attributes = vals.slice(2,7)
 	self.image = vals[8]

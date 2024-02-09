@@ -23,7 +23,6 @@ func init(transform):
 	transformation = transform
 	self.text = transformation[1]
 	
-	print("success")
 
 
 

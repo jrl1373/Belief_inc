@@ -14,7 +14,6 @@ func set_ideology(ideology):
 	
 func set_transformation(transformation):
 	self.transformation = transformation
-	print(self.transformation)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -28,8 +27,6 @@ func _on_exit_btn_pressed():
 
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
-	print("EEEE")
-	print(event)
 	if event.is_action_pressed("click"):
 		transformation.show()
 	pass # Replace with function body.

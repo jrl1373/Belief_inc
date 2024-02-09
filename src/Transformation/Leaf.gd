@@ -15,6 +15,5 @@ func _process(delta):
 
 
 func _on_mouse_entered():
-	print("d")
 	entered.emit(tier,idx)
 	pass # Replace with function body.
